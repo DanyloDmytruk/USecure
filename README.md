@@ -25,10 +25,6 @@ USecure (Ukrainian Secure) is a project focused on enhancing Windows System Secu
 2. Follow the hints, check your system protection level
 3. Use Proactive protection
 
-## Contributing
-
-Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

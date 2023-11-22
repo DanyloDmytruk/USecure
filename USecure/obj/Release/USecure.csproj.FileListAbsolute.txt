@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\USecure\USecure\bin\Release\USecure.exe.config
+C:\Users\Admin\Desktop\USecure\USecure\bin\Release\USecure.exe
+C:\Users\Admin\Desktop\USecure\USecure\bin\Release\USecure.pdb
+C:\Users\Admin\Desktop\USecure\USecure\bin\Release\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\USecure\USecure\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.Form1.resources
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.Form2.resources
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.Properties.Resources.resources
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.csproj.CopyComplete
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.exe
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.pdb
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.AboutForm.resources
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.AdvicesForm.resources
+C:\Users\Admin\Desktop\USecure\USecure\obj\Release\USecure.ProactiveProtectionForm.resources

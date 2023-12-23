@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USecure", "USecure\USecure.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UAgent", "UAgent\UAgent.vcxproj", "{62B0A2A4-9EE8-4AC1-BAFB-ED1E478ECD8D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AgentDll", "AgentDll\AgentDll.vcxproj", "{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,16 @@ Global
 		{62B0A2A4-9EE8-4AC1-BAFB-ED1E478ECD8D}.Release|x64.Build.0 = Release|x64
 		{62B0A2A4-9EE8-4AC1-BAFB-ED1E478ECD8D}.Release|x86.ActiveCfg = Release|Win32
 		{62B0A2A4-9EE8-4AC1-BAFB-ED1E478ECD8D}.Release|x86.Build.0 = Release|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Debug|x64.ActiveCfg = Debug|x64
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Debug|x64.Build.0 = Debug|x64
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Debug|x86.ActiveCfg = Debug|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Debug|x86.Build.0 = Debug|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Release|x64.ActiveCfg = Release|x64
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Release|x64.Build.0 = Release|x64
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Release|x86.ActiveCfg = Release|Win32
+		{8E7E6963-822E-4FBC-B8D3-7C4767B7801E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

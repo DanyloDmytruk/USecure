@@ -117,7 +117,7 @@ namespace USecure
             this.Controls.Add(this.checkBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProactiveProtectionForm";
-            this.Text = "Проактивна защита";
+            this.Text = "Проактивний захист";
             this.Load += new System.EventHandler(this.ProactiveProtectionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

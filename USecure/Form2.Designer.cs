@@ -62,8 +62,8 @@ namespace USecure
             // проактивнаЗащитаToolStripMenuItem
             // 
             this.проактивнаЗащитаToolStripMenuItem.Name = "проактивнаЗащитаToolStripMenuItem";
-            this.проактивнаЗащитаToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
-            this.проактивнаЗащитаToolStripMenuItem.Text = "Проактивна защита";
+            this.проактивнаЗащитаToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.проактивнаЗащитаToolStripMenuItem.Text = "Проактивний захист";
             this.проактивнаЗащитаToolStripMenuItem.Click += new System.EventHandler(this.проактивнаЗащитаToolStripMenuItem_Click);
             // 
             // проПЗToolStripMenuItem

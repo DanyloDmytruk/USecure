@@ -5,6 +5,8 @@
 
 #include "AutoStart.h"
 #include "VTCheckDownloads.h"
+#include "SuspiciousProcessesCheck.h"
+#include "InjectDll.h"
 
 
 
@@ -53,8 +55,7 @@ BOOL ParseSettings(BOOL* agent_autostart, BOOL* virustotal_downloads_send, BOOL*
 }
 
 
-//TODO
-// - Add to autostart (in Agent exe)
+// - Add to autostart (in Agent exe) 
 // - Send downloads to VT (in Agent exe at start + injected dll for new)
 // - Check suspicious files and processes in background (injected dll bot check)
 // - Check suspicious processes for access to private files (in Agent exe check handles)
@@ -64,20 +65,36 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     BOOL is_injected_dll = FALSE;
     BOOL agent_autostart = FALSE, virustotal_downloads_send = FALSE, agent_background_check = FALSE, agent_processes_access_check = FALSE;
 
+    HANDLE hThreads[3];
+
     if (ParseSettings(&agent_autostart, &virustotal_downloads_send, &agent_background_check, &agent_processes_access_check))
     {
         if (agent_autostart) {
-            //AddSelfToAutostart();
+            AddSelfToAutostart();
         }
 
         if (virustotal_downloads_send) {
-            VTCheckDownloads();
+            hThreads[0] = CreateThread(0, 0, VTCheckDownloads, 0, 0, 0);
             
             if (is_injected_dll == FALSE) {
-                //Here calls injection agent dll to explorer.exe
+                hThreads[1] = CreateThread(0, 0, InjectAgentDll, 0, 0, 0);
                 is_injected_dll = TRUE;
             }
         }
+
+        if (agent_background_check) {
+            if (is_injected_dll == FALSE) {
+                hThreads[1] = CreateThread(0, 0, InjectAgentDll, 0, 0, 0);
+                is_injected_dll = TRUE;
+            }
+        }
+
+        if (agent_processes_access_check) {
+            hThreads[2] = CreateThread(0, 0, SuspiciousProcessesCheck, 0, 0, 0);
+        }
+
+        WaitForMultipleObjects(3, hThreads, TRUE, INFINITE); //Wait for all threads
+
     }
     
 

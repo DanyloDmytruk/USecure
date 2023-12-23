@@ -144,11 +144,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AutoStart.cpp" />
+    <ClCompile Include="InjectDll.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SuspiciousProcessesCheck.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="VTCheckDownloads.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutoStart.h" />
+    <ClInclude Include="InjectDll.h" />
+    <ClInclude Include="SuspiciousProcessesCheck.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="VTCheckDownloads.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

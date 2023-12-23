@@ -1,5 +1,4 @@
 #pragma once
 #include <Windows.h>
 
-BOOL VTCheckDownloads();
-
+DWORD WINAPI VTCheckDownloads(LPVOID lpParam);

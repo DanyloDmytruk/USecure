@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
+  BackgroundRoutine.cpp
+c:\program files (x86)\microsoft sdks\windows\v7.1a\include\shlobj.h(1151): warning C4091: 'typedef ': ignored on left of 'tagGPFIDL_FLAGS' when no variable is declared
+  HookChecks.cpp
+  Generating code
+  All 1160 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AgentDll.vcxproj -> C:\Users\Admin\Desktop\Study\USecure\Release\agent32.dll

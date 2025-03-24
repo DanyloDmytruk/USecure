@@ -1,0 +1,7 @@
+{
+  "helpzsu": true,
+  "agent_autostart": false,
+  "virustotal_downloads_send": false,
+  "agent_background_check": false,
+  "agent_processes_access_check": true
+}

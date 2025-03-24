@@ -160,5 +160,7 @@ DWORD WINAPI BotKillerThread(LPVOID lpParam) {
 DWORD WINAPI BackgroundRoutine(LPVOID lpParam) 
 {
 	CreateThread(0, 0, BotKillerThread, 0, 0, 0);
+
+	return 0;
 	
 }

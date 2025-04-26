@@ -98,5 +98,16 @@ namespace USecure
 
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CheckFile checkFileForm = new CheckFile();
+            checkFileForm.Show();
+        }
     }
 }

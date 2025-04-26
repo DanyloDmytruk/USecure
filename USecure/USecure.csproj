@@ -61,6 +61,12 @@
     <Compile Include="AdvicesForm.Designer.cs">
       <DependentUpon>AdvicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckFile.Designer.cs">
+      <DependentUpon>CheckFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdvicesForm.resx">
       <DependentUpon>AdvicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckFile.resx">
+      <DependentUpon>CheckFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -118,6 +127,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WUApiLib">
+      <Guid>{B596CC9F-56E5-419E-A622-E01BB457431E}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

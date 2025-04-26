@@ -74,6 +74,8 @@ VOID GetSettingsFile(LPSTR* SettingsFilePath)
 
 VOID MainRoutine() 
 {
+    MessageBoxA(0, "Test", "Test", 0); return;
+
     HANDLE hThreads[2];
 
     LPSTR SettingsFilePath = (LPSTR)malloc(MAX_PATH);

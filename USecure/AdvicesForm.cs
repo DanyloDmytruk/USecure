@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 using System.Management;
-
+using WUApiLib;
 
 namespace USecure
 {
@@ -26,6 +26,27 @@ namespace USecure
         {
             try
             {
+                // First way
+                try
+                {
+                    UpdateSession updateSession = new UpdateSession();
+                    IUpdateSearcher updateSearcher = updateSession.CreateUpdateSearcher();
+
+                    // Search only for updates that are not installed
+                    ISearchResult searchResult = updateSearcher.Search("IsInstalled=0");
+
+                    int updateCount = searchResult.Updates.Count;
+                    if (updateCount > 0)
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    
+                }
+
+                // Second way
                 // Query the Win32_QuickFixEngineering class
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_QuickFixEngineering");
 
@@ -56,6 +77,16 @@ namespace USecure
         {
             try
             {
+                // First way
+                string wmipath = @"\\" + Environment.MachineName + @"\root\SecurityCenter2";
+                ManagementObjectSearcher searcher0 = new ManagementObjectSearcher(wmipath, "SELECT * FROM AntiVirusProduct");
+                ManagementObjectCollection antivirusProducts0 = searcher0.Get();
+                if (antivirusProducts0.Count > 0)
+                {
+                    return true;
+                }
+
+                // Second way
                 // Query the AntivirusProduct class
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM AntivirusProduct");
 
@@ -83,6 +114,22 @@ namespace USecure
         {
             try
             {
+                // First way
+                string query = "SELECT * FROM FirewallProduct";
+                string wmiNamespace = @"\\.\root\SecurityCenter2";
+                ManagementScope scope = new ManagementScope(wmiNamespace);
+                scope.Connect();
+
+                ObjectQuery wmiQuery = new ObjectQuery(query);
+                ManagementObjectSearcher searcher0 = new ManagementObjectSearcher(scope, wmiQuery);
+                ManagementObjectCollection results0 = searcher0.Get();
+
+                if (results0.Count == 0)
+                {
+                    return false;
+                }
+
+                // Second way
                 // Query the FirewallProduct class
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM FirewallProduct");
 

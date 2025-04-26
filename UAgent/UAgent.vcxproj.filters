@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="wow64ext">
+      <UniqueIdentifier>{1d6a5224-a71b-43af-a0a3-1ff0fa60271c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,6 +36,9 @@
     <ClCompile Include="InjectDll.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="wow64ext\wow64ext.cpp">
+      <Filter>wow64ext</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutoStart.h">
@@ -49,6 +55,18 @@
     </ClInclude>
     <ClInclude Include="InjectDll.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\resource.h">
+      <Filter>wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\wow64ext.h">
+      <Filter>wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\CMemPtr.h">
+      <Filter>wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\internal.h">
+      <Filter>wow64ext</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

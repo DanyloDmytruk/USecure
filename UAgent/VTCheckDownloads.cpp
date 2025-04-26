@@ -138,8 +138,33 @@ void KillProcessAndDeleteFile(const char* fileName) {
     DeleteFileA(fileName);
 }
 
+
+// True if file size is more than compare_size
+BOOL fileSizeCompareMore(LPCSTR file_path, DWORD compare_size)
+{
+    HANDLE hFile = CreateFileA(file_path, GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+    if (!hFile)
+    {
+        return FALSE;
+    }
+
+    DWORD file_size = GetFileSize(hFile, 0);
+
+    if (file_size > compare_size)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 // Function to upload a file to VirusTotal
 BOOL uploadFileToVirusTotal(const char* file_path) {
+
+    // Do not upload files more than 32 MB
+    if (fileSizeCompareMore(file_path, 32*1024*1024))
+    {
+        return FALSE;
+    }
+
     CURL* curl;
     CURLcode res;
 

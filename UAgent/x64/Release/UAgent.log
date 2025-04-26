@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Platforms\x64\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
+  AutoStart.cpp
+c:\users\admin\desktop\study\usecure\uagent\autostart.cpp(16): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  InjectDll.cpp
+c:\users\admin\desktop\study\usecure\uagent\injectdll.cpp(91): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  Main.cpp
+  SuspiciousProcessesCheck.cpp
+c:\users\admin\desktop\study\usecure\uagent\suspiciousprocessescheck.cpp(185): warning C4018: '<': signed/unsigned mismatch
+  Utils.cpp
+  VTCheckDownloads.cpp
+c:\users\admin\desktop\study\usecure\uagent\vtcheckdownloads.cpp(4): fatal error C1083: Cannot open include file: 'curl/curl.h': No such file or directory

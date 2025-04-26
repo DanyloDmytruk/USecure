@@ -12,6 +12,9 @@ C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.ProactiveProtec
 C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.Properties.Resources.resources
 C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.csproj.Up2Date
 C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.exe
 C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.pdb
+C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\Interop.WUApiLib.dll
+C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.csproj.ResolveComReference.cache
+C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.csproj.CopyComplete
+C:\Users\Admin\Desktop\Study\USecure\USecure\obj\Release\USecure.CheckFile.resources

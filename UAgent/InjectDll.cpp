@@ -1,5 +1,6 @@
 #include "InjectDll.h"
 #include <iostream>
+#include "wow64ext/wow64ext.h"
 
 
 LPVOID write_into_process(HANDLE hProcess, LPBYTE buffer, SIZE_T buffer_size, DWORD protect)
@@ -49,6 +50,60 @@ bool inject_with_loadlibrary(HANDLE hProcess, const wchar_t* inject_path)
         return true;
     }
     return false;
+}
+
+
+
+DWORD64 write_into_process_wow64(HANDLE hProcess, LPBYTE buffer, SIZE_T buffer_size, DWORD64 protect)
+{
+    DWORD64 remoteAddress = VirtualAllocEx64(hProcess, NULL, buffer_size, MEM_COMMIT | MEM_RESERVE, protect);
+    if (remoteAddress == NULL) {
+        return NULL;
+    }
+    if (!WriteProcessMemory64(hProcess, remoteAddress, buffer, buffer_size, NULL)) {
+        VirtualFreeEx64(hProcess, remoteAddress, buffer_size, MEM_FREE);
+        return NULL;
+    }
+
+    return remoteAddress;
+}
+
+bool inject_with_loadlibrary_wow64(HANDLE hProcess, const wchar_t* inject_path)
+{
+    if (!inject_path) {
+        return false;
+    }
+    DWORD64 hModule = GetModuleHandle64(L"kernel32.dll");
+    if (!hModule) return false;
+
+    DWORD64 hLoadLib = GetProcAddress64(hModule, "LoadLibraryW");
+    if (!hLoadLib) return false;
+
+    //calculate size along with the terminating '\0'
+    SIZE_T inject_path_size = (wcslen(inject_path) + 1) * sizeof(inject_path[0]);
+
+    // write the full path of the DLL into the remote process:
+    DWORD64 remote_ptr = write_into_process_wow64(hProcess, (BYTE*)inject_path, inject_path_size, PAGE_READWRITE);
+    if (!remote_ptr) {
+        return false;
+    }
+
+    // Inject to the remote process:
+    DWORD ret = WAIT_FAILED;
+
+    DWORD64 hThread;
+
+    struct CLIENT_ID { DWORD64 UniqueProcess; DWORD64 UniqueThread; };
+    CLIENT_ID clientId;
+
+    DWORD64 pRtlCreateUserThread = GetProcAddress64(getNTDLL64(), "RtlCreateUserThread");
+    if (X64Call(pRtlCreateUserThread, 10, (DWORD64)hProcess, (DWORD64)NULL, (DWORD64)FALSE, (DWORD64)0, (DWORD64)0, (DWORD64)0,
+        (DWORD64)hLoadLib, (DWORD64)remote_ptr, (DWORD64)&hThread, (DWORD64)&clientId))
+    {
+        return false;
+    }
+    
+    return true;
 }
 
 
@@ -134,7 +189,14 @@ DWORD WINAPI InjectAgentDll(LPVOID lpParam) {
                 return FALSE;
             }
 
-            inject_with_loadlibrary(hProcess, buffer);
+            if (lpSystemInfo.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64) {
+                // Inject 64bit dll from wow64 proc with heavens gate
+                inject_with_loadlibrary_wow64(hProcess, buffer);
+            }
+            else {
+                // Inject 32bit dll from 32bit proc simply
+                inject_with_loadlibrary(hProcess, buffer);
+            }
         }
     }
     catch (...) {

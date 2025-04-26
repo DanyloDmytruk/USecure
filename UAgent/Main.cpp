@@ -8,6 +8,8 @@
 #include "SuspiciousProcessesCheck.h"
 #include "InjectDll.h"
 
+#include "wow64ext/wow64ext.h"
+
 
 
 
@@ -54,7 +56,6 @@ BOOL ParseSettings(BOOL* agent_autostart, BOOL* virustotal_downloads_send, BOOL*
     return TRUE;
 }
 
-
 // - Add to autostart (in Agent exe) 
 // - Send downloads to VT (in Agent exe at start + injected dll for new)
 // - Check suspicious files and processes in background (injected dll bot check)
@@ -62,14 +63,9 @@ BOOL ParseSettings(BOOL* agent_autostart, BOOL* virustotal_downloads_send, BOOL*
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) 
 {
-    /*LPCWSTR filePath = L"C:\\curl\\hello.txt";
-    HANDLE hFile = CreateFileW(filePath, GENERIC_WRITE, 0, 0, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, 0);
-    Sleep(1000*60*60);
-    return 0;*/
-    SuspiciousProcessesCheck(0);
-    return 0;
+    InitWow64ext();
 
-
+    InjectAgentDll(0); return 0;
 
     BOOL is_injected_dll = FALSE;
     BOOL agent_autostart = FALSE, virustotal_downloads_send = FALSE, agent_background_check = FALSE, agent_processes_access_check = FALSE;

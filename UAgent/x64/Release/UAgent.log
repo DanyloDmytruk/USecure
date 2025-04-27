@@ -1,11 +1,123 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Platforms\x64\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
-  AutoStart.cpp
-c:\users\admin\desktop\study\usecure\uagent\autostart.cpp(16): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
   InjectDll.cpp
-c:\users\admin\desktop\study\usecure\uagent\injectdll.cpp(91): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\users\admin\desktop\study\usecure\uagent\injectdll.cpp(59): warning C4244: 'argument': conversion from 'DWORD64' to 'DWORD', possible loss of data
+c:\users\admin\desktop\study\usecure\uagent\injectdll.cpp(116): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
   Main.cpp
-  SuspiciousProcessesCheck.cpp
-c:\users\admin\desktop\study\usecure\uagent\suspiciousprocessescheck.cpp(185): warning C4018: '<': signed/unsigned mismatch
-  Utils.cpp
   VTCheckDownloads.cpp
 c:\users\admin\desktop\study\usecure\uagent\vtcheckdownloads.cpp(4): fatal error C1083: Cannot open include file: 'curl/curl.h': No such file or directory
+  wow64ext.cpp
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(81): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(84): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(84): error C2146: syntax error: missing ';' before identifier 'back_fs'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(84): error C2065: 'fs': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(85): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(85): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(85): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(85): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(86): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(86): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(86): error C2146: syntax error: missing ';' before identifier 'fs'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(86): error C2065: 'fs': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(86): error C2065: 'ax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(89): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(89): error C2146: syntax error: missing ';' before identifier 'back_esp'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(89): error C2065: 'esp': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(95): error C2065: 'and': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(95): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(95): error C2065: 'esp': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(97): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(97): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(97): error C2146: syntax error: missing ')' before identifier '__emit'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(104): error C2065: 'ecx': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C2146: syntax error: missing ';' before identifier 'edx'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(105): error C2065: 'edx': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(106): error C2065: 'push': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(106): error C2146: syntax error: missing ';' before identifier '_r8'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(107): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(107): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(107): error C2146: syntax error: missing ';' before identifier '__emit'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(108): error C2065: 'push': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(108): error C2146: syntax error: missing ';' before identifier '_r9'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(109): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(109): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(109): error C2146: syntax error: missing ';' before identifier '__emit'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(111): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(115): error C2065: 'test': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(115): error C2146: syntax error: missing ';' before identifier 'al'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(115): error C2065: 'al': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(116): error C2065: 'jnz': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(116): error C2146: syntax error: missing ';' before identifier '_no_adjust'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(116): error C2065: '_no_adjust': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(117): error C2065: 'sub': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(117): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(117): error C2065: 'esp': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(120): error C2065: 'push': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(120): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(120): error C2065: 'edi': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C2065: 'mov': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(121): error C2065: 'edi': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C2146: syntax error: missing ';' before identifier 'test'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C2065: 'test': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(124): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(125): error C2065: 'jz': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(125): error C2146: syntax error: missing ';' before identifier '_ls_e'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(125): error C2065: '_ls_e': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2146: syntax error: missing ';' before identifier 'lea'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2065: 'lea': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2065: 'edi': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2065: 'dword': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2146: syntax error: missing ';' before identifier 'ptr'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2065: 'ptr': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(126): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C2146: syntax error: missing ';' before identifier 'test'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C2065: 'test': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(129): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(130): error C2065: 'jz': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(130): error C2146: syntax error: missing ';' before identifier '_ls_e'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(130): error C2065: '_ls_e': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2065: 'push': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2146: syntax error: missing ';' before identifier 'dword'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2065: 'dword': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2146: syntax error: missing ';' before identifier 'ptr'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2065: 'ptr': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(131): error C2065: 'edi': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C2146: syntax error: missing ';' before identifier 'sub'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C2065: 'sub': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(132): error C2065: 'edi': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C3861: '__emit': identifier not found
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C2146: syntax error: missing ';' before identifier 'sub'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C2065: 'sub': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): error C2065: 'eax': undeclared identifier
+c:\users\admin\desktop\study\usecure\uagent\wow64ext\wow64ext.cpp(133): fatal error C1003: error count exceeds 100; stopping compilation

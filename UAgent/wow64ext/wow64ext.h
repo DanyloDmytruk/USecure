@@ -353,6 +353,7 @@ struct _CONTEXT64
 
 extern "C"
 {
+
     void __cdecl InitWow64ext();
 	DWORD64 __cdecl X64Call(DWORD64 func, int argC, ...);
 	DWORD64 __cdecl GetModuleHandle64(const wchar_t* lpModuleName);

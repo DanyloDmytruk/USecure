@@ -26,19 +26,8 @@
 #include "wow64ext.h"
 #include "CMemPtr.h"
 
-HANDLE g_heap;
 BOOL g_isWow64;
 
-void* malloc(size_t size)
-{
-	return HeapAlloc(g_heap, 0, size);
-}
-
-void free(void* ptr)
-{
-	if (nullptr != ptr)
-		HeapFree(g_heap, 0, ptr);
-}
 
 int _wcsicmp(const wchar_t *string1, const wchar_t *string2)
 {
@@ -64,8 +53,6 @@ int _wcsicmp(const wchar_t *string1, const wchar_t *string2)
 extern "C" void __cdecl InitWow64ext()
 {
     IsWow64Process(GetCurrentProcess(), &g_isWow64);
-    g_heap = GetProcessHeap();
-
 }
 
 
@@ -299,14 +286,16 @@ extern "C"  DWORD64 __cdecl GetModuleHandle64(const wchar_t* lpModuleName)
 	if (!g_isWow64)
 		return 0;
 
+    
     TEB64 teb64;
     getMem64(&teb64, getTEB64(), sizeof(TEB64));
+    
     
     PEB64 peb64;
     getMem64(&peb64, teb64.ProcessEnvironmentBlock, sizeof(PEB64));
     PEB_LDR_DATA64 ldr;
     getMem64(&ldr, peb64.Ldr, sizeof(PEB_LDR_DATA64));
-
+   
     DWORD64 LastEntry = peb64.Ldr + offsetof(PEB_LDR_DATA64, InLoadOrderModuleList);
     LDR_DATA_TABLE_ENTRY64 head;
     head.InLoadOrderLinks.Flink = ldr.InLoadOrderModuleList.Flink;
